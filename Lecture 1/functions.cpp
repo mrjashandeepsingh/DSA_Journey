@@ -35,11 +35,14 @@ int main(){
     cout <<"Sum = " << sum(x,y)<< "\n";
 
     int t = 10;
-    cout << t <<endl;
+    cout << "Original = " << t <<endl;
     doValue(t);
-    cout << t <<endl;
+    cout << "Pass by value" << t <<endl;
     doRefer(t);
-    cout << t <<endl;
+    cout << "Pass by reference" << t <<endl;
     
+    
+
+
     return 0;
 }
