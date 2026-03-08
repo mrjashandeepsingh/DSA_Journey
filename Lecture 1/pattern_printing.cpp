@@ -170,12 +170,200 @@ void pattern12(int n) {
     
 }
 
+void pattern13(int n){
+    int k = 1;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            cout << k++;
+        }
+        cout <<"\n";
+    }
+    
+}
+
+void pattern14(int n) {
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            cout<< char(j+65);
+        }
+        cout <<"\n";
+    }
+    
+}
+
+void pattern15(int n) {
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n-i; j++)
+        {
+            cout<< char(j+65);
+        }
+        cout <<"\n";
+    }
+    
+}
+
+void pattern16(int n) {
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            cout<< char(i+65);
+        }
+        cout <<"\n";
+    }
+    
+}
+
+void pattern17(int n) {
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n-i-1; j++)
+        {
+            cout<<" ";
+        }
+        for (int j = 0; j <= i; j++)
+        {
+            cout<<char(j+65);
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            cout<<char(i-j+65);
+        }
+        
+        
+        cout<<"\n";
+    }
+    
+}
+
+void pattern18(int n){
+    for (int i = n; i > 0; i--)
+    {
+        for (int j = 0; j <= n-i; j++)
+        {
+            cout<<char('A'+i+j-1);
+        }
+        cout<<"\n";
+    }
+    
+}
+
+void pattern19(int n){
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n-i; j++)
+        {
+            cout<<"*";
+        }
+        for (int j = 0; j < 2*i; j++)
+        {
+            cout<<" ";
+        }
+        for (int j = 0; j < n-i; j++)
+        {
+            cout<<"*";
+        }
+        
+        cout<<"\n";
+    }
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            cout<<"*";
+        }
+        for (int j = 0; j < 2*(n-i-1); j++)
+        {
+            cout<<" ";
+        }
+        for (int j = 0; j <= i; j++)
+        {
+            cout<<"*";
+        }
+        cout<<"\n";
+    }
+    
+    
+}
+
+void pattern20(int n){
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            cout<<"*";
+        }
+        for (int j = 0; j < 2*(n-i-1); j++)
+        {
+            cout<<" ";
+        }
+        for (int j = 0; j <= i; j++)
+        {
+            cout<<"*";
+        }
+        cout<<'\n';
+    }
+    for (int i = 1; i < n; i++)
+    {
+        for (int j = 0; j < n-i; j++)
+        {
+            cout<< "*";
+        }
+        for (int j = 0; j < 2*i; j++)
+        {
+            cout<<" ";
+        }
+        for (int j = 0; j < n-i; j++)
+        {
+            cout<< "*";
+        }
+        
+        cout<<"\n";
+    }
+}
+
+void pattern21(int n){
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if(i==0 || i==n-1 || j==0 || j==n-1){
+                cout<<"*";
+            }
+            else{
+                cout<<" ";
+            }
+        }
+        cout<<"\n";
+    }
+    
+}
+
+void pattern22(int n){
+    int len = 2*n-1;
+    for (int i = 0; i < len; i++)
+    {
+        for (int j = 0; j < len; j++)
+        {
+            int dist=min(min(i,j),min(len-i-1,len-j-1));
+            cout << n - dist;
+        }
+        cout<<"\n";
+    }
+    
+}
+
 int main()
 {
-    // int n;
-    // cout << "Enter a no: ";
-    // cin >> n;
-    pattern12(4);
+    int n;
+    cout << "Enter a no: ";
+    cin >> n;
+    pattern22(n);
 
     return 0;
 }
